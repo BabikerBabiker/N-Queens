@@ -1,11 +1,3 @@
-/* Author: Babiker I Babiker
- * Date: 02/06/2024
- * Course: CSCI-3 JAVA
- * Description: Given an 8 by 8 board, it returns all permutations of queens 
- *              in a formation such that no queen is in the same row, column 
- *              or diagonal.
- */
-
 import java.util.Scanner;
 
 public class queens {
@@ -50,9 +42,10 @@ public class queens {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(system.out);
+        Scanner scan = new Scanner(System.in);
+        int n = 0;
         System.out.print("Enter n: ");
-        n = scan = scan.nextInt();
+        n = scan.nextInt();
 
         String[][] board = new String[n][n];
 
@@ -61,5 +54,6 @@ public class queens {
                 board[i][j] = ".";
 
         solveQueens(board, n, 0);
+        scan.close();
     }
 }
