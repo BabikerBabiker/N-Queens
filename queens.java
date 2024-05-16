@@ -7,13 +7,12 @@ public class queens {
             return;
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
             if (check(board, n, i, num)) {
                 board[num][i] = "q";
                 solveQueens(board, n, num + 1);
                 board[num][i] = ".";
             }
-        }
     }
 
     public static boolean check(String[][] board, int n, int col, int row) {
